@@ -67,8 +67,11 @@ div > div > div > span:first-child{
     position:absolute;
     top:200px;
     left: 32.5%;
+    right: 67.5%;
     max-height: 10vh;
     opacity: 1;
+    min-width:0px;
+
 }
 
 span p:only-child {
@@ -88,7 +91,6 @@ div > div > div > span:last-child{
     /* top: 400px; */
     /* bottom: 0px; */
     margin-top: 95vh;
-    margin-left: 30%;
     /* background-color: white; */
     /* width:40vw;
     height: 10vw; */
@@ -96,6 +98,8 @@ div > div > div > span:last-child{
     display: inline;
     font-family: sans-serif, 'Times New Roman', Times, serif;
     font-size: 0.8em;
+    width: 40vw;
+    text-align: center;
 }
 
 div > div > div > span:last-child > p{ 
@@ -118,22 +122,25 @@ a{
     width: 100%;
     position: static;
     max-width: 60vw;
-    height: auto;
 }
 
 #first-block{
     background-color: rgb(245, 245, 245);
     max-height: 35vh;
+    height: 35vh;
 }
 
 #second-block{
     background-color: rgb(255, 255, 255);
     max-height: 30vh;
+    height: 30vh;
+    
 }
 
 #third-block{
     background-color: rgb(245, 245, 245);
     max-height: 35vh;
+    height: 35vh;
 }
 
 #first-block p {
@@ -148,14 +155,18 @@ a{
 }
 
 #log-in{
-    display: block;
+    display: inline-block;
     position:static;
-    margin-top: 0%;
+    margin-top: 15vh;
     margin-left: 0%;
     color: black;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
 }
 
 button{
+    position:absolute;
+    top: 75vh;
     background-color: #596D48;
     color: white;
     height: 5vh;
@@ -166,21 +177,90 @@ button{
     border-radius: 5px;
     font-weight: bold;
     font-family: sans-serif, 'Times New Roman', Times, serif;
-    margin-top: 10vw;
+    /* margin-top: 10vw; */
     margin-bottom: 2vw;
     margin-left:5vw;
 }
 
-button + span > a, button + span > p{
+div span:only-child > a, div span:only-child > p{
     font-size: 1.3em;
+    text-align: left;
+    position: static;
+    margin-top: 0vh;
 }
-button + span > a{
+div > span:only-child > a{
     color: #596D48;
 }
 
-button + span > p {
+div > span:only-child > p {
     margin-left: 5vw;
 }
+
+#second-block h1{
+    margin-left: 5vw;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: black;
+}
+
+#form-div{
+    display: flex;
+    position: static;
+}
+
+#form-div div{
+    position: static;
+    flex: 1;
+    margin-left: calc(5vw - 2px);
+    padding: 2px; 
+    padding-bottom: 2vw;
+
+}
+
+label, input{
+    display: block;
+    min-width: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+}
+
+input{
+    /* border-color: #E5E7EB; */
+    border-right: 2px solid #E5E7EB;
+    border-left: 2px solid #E5E7EB;
+    border-bottom: 2px solid #E5E7EB;
+    border-top: 2px solid #E5E7EB; 
+}
+
+input:focus{
+    outline: none !important;
+    border-right: 2px solid #5396ec;
+    border-left: 2px solid #5396ec;
+    border-bottom: 2px solid #5396ec;
+    border-top: 2px solid #5396ec;
+    box-shadow: 3px 3px 5px -3px gray;
+
+}
+
+input:focus:invalid{
+    outline: none !important;
+    border: 2px solid red;
+    box-shadow: 3px 3px 5px -3px gray;
+}
+
+#form-div div:last-child{
+    margin-left: 0vw;
+}
+
+#form-div div:first-child{
+    flex-grow:0.8;
+}
+
+
+
+/* form{
+    width: 60vw;
+} */
 
 
 
